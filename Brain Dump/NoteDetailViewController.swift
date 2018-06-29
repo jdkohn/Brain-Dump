@@ -13,13 +13,12 @@ class NoteDetailViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     
-    var text: String!
-    var name: String!
+    var note: Note!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = name
-        self.textView.text = text
+        self.title = note.title!
+        self.textView.text = note.text!
         self.textView.isEditable = false
     }
 }

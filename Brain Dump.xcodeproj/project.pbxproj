@@ -21,6 +21,7 @@
 		23F5753520E6418B000DF14B /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5753420E6418B000DF14B /* NoteDetailViewController.swift */; };
 		23F5753720E6419A000DF14B /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5753620E6419A000DF14B /* AddNoteViewController.swift */; };
 		23F5753920E66F0C000DF14B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5753820E66F0C000DF14B /* CoreDataManager.swift */; };
+		23F5753B20E689C2000DF14B /* SaveNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5753A20E689C2000DF14B /* SaveNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		23F5753420E6418B000DF14B /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
 		23F5753620E6419A000DF14B /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		23F5753820E66F0C000DF14B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		23F5753A20E689C2000DF14B /* SaveNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				23F574FB20E6411F000DF14B /* AppDelegate.swift */,
 				23F574FD20E6411F000DF14B /* ViewController.swift */,
 				23F5752C20E64128000DF14B /* Main.storyboard */,
+				23F5753A20E689C2000DF14B /* SaveNoteViewController.swift */,
 				23F5752E20E6415D000DF14B /* SplashScreen.swift */,
 				23F5753020E6416E000DF14B /* CategoryViewController.swift */,
 				23F5753220E6417F000DF14B /* NotesViewController.swift */,
@@ -289,6 +292,7 @@
 				23F5753920E66F0C000DF14B /* CoreDataManager.swift in Sources */,
 				23F5750420E6411F000DF14B /* Brain_Dump.xcdatamodeld in Sources */,
 				23F574FC20E6411F000DF14B /* AppDelegate.swift in Sources */,
+				23F5753B20E689C2000DF14B /* SaveNoteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

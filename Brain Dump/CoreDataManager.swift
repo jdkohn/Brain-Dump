@@ -34,7 +34,7 @@ public class CoreDataManager {
         }
     }
     
-    func load(entityName: String) -> [NSDictionary] {
+    func load(entityName: String) -> [NSManagedObject] {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -44,12 +44,12 @@ public class CoreDataManager {
         do {
             let result = try context.fetch(request)
             
-            return result as! [NSDictionary]
+            return result as! [NSManagedObject]
 //            for data in result as! [NSManagedObject] {
 //                print(data.value(forKey: "username") as! String)
 //            }
         } catch {
-            return [["Fail": "Oops"]]
+            return [NSManagedObject]()
         }
     }
 }

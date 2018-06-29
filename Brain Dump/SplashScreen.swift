@@ -13,11 +13,11 @@ class SplashScreen: UIViewController {
     
     @IBOutlet weak var textEditor: UITextView!
     let cd = CoreDataManager()
-    var categories = [NSDictionary]()
-    var notes = [NSDictionary]()
+    var categories = [Category]()
+    var notes = [Note]()
     
     @IBAction func save(_ sender: Any) {
-        self.performSegue(withIdentifier: "goToHome", sender: nil)
+        self.performSegue(withIdentifier: "saveFromSplash", sender: nil)
     }
     
     @IBAction func skip(_ sender: Any) {
@@ -26,13 +26,18 @@ class SplashScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
     }
     
     func loadData() {
-        categories = cd.load(entityName: "Category")
-        notes = cd.load(entityName: "Note")
+        categories = cd.load(entityName: "Category") as! [Category]
+        notes = cd.load(entityName: "Note") as! [Note]
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "saveFromSplash") {
+            let controller = segue.destination as! SaveNoteViewController
+            controller.fromHome = false
+            controller.text = textEditor.text
+        }
+    }
 }
