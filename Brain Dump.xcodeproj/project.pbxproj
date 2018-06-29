@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		23F574FC20E6411F000DF14B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F574FB20E6411F000DF14B /* AppDelegate.swift */; };
 		23F574FE20E6411F000DF14B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F574FD20E6411F000DF14B /* ViewController.swift */; };
-		23F5750120E6411F000DF14B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F574FF20E6411F000DF14B /* Main.storyboard */; };
 		23F5750420E6411F000DF14B /* Brain_Dump.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23F5750220E6411F000DF14B /* Brain_Dump.xcdatamodeld */; };
 		23F5750620E6411F000DF14B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F5750520E6411F000DF14B /* Assets.xcassets */; };
 		23F5750920E6411F000DF14B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F5750720E6411F000DF14B /* LaunchScreen.storyboard */; };
 		23F5751420E6411F000DF14B /* Brain_DumpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5751320E6411F000DF14B /* Brain_DumpTests.swift */; };
 		23F5751F20E6411F000DF14B /* Brain_DumpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5751E20E6411F000DF14B /* Brain_DumpUITests.swift */; };
+		23F5752D20E64128000DF14B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23F5752C20E64128000DF14B /* Main.storyboard */; };
+		23F5752F20E6415D000DF14B /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5752E20E6415D000DF14B /* SplashScreen.swift */; };
+		23F5753120E6416E000DF14B /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5753020E6416E000DF14B /* CategoryViewController.swift */; };
+		23F5753320E6417F000DF14B /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5753220E6417F000DF14B /* NotesViewController.swift */; };
+		23F5753520E6418B000DF14B /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5753420E6418B000DF14B /* NoteDetailViewController.swift */; };
+		23F5753720E6419A000DF14B /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5753620E6419A000DF14B /* AddNoteViewController.swift */; };
+		23F5753920E66F0C000DF14B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F5753820E66F0C000DF14B /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,6 @@
 		23F574F820E6411F000DF14B /* Brain Dump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brain Dump.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F574FB20E6411F000DF14B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23F574FD20E6411F000DF14B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		23F5750020E6411F000DF14B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23F5750320E6411F000DF14B /* Brain_Dump.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Brain_Dump.xcdatamodel; sourceTree = "<group>"; };
 		23F5750520E6411F000DF14B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23F5750820E6411F000DF14B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,13 @@
 		23F5751A20E6411F000DF14B /* Brain DumpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brain DumpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F5751E20E6411F000DF14B /* Brain_DumpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain_DumpUITests.swift; sourceTree = "<group>"; };
 		23F5752020E6411F000DF14B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23F5752C20E64128000DF14B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		23F5752E20E6415D000DF14B /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		23F5753020E6416E000DF14B /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		23F5753220E6417F000DF14B /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		23F5753420E6418B000DF14B /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		23F5753620E6419A000DF14B /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		23F5753820E66F0C000DF14B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +113,13 @@
 			children = (
 				23F574FB20E6411F000DF14B /* AppDelegate.swift */,
 				23F574FD20E6411F000DF14B /* ViewController.swift */,
-				23F574FF20E6411F000DF14B /* Main.storyboard */,
+				23F5752C20E64128000DF14B /* Main.storyboard */,
+				23F5752E20E6415D000DF14B /* SplashScreen.swift */,
+				23F5753020E6416E000DF14B /* CategoryViewController.swift */,
+				23F5753220E6417F000DF14B /* NotesViewController.swift */,
+				23F5753420E6418B000DF14B /* NoteDetailViewController.swift */,
+				23F5753820E66F0C000DF14B /* CoreDataManager.swift */,
+				23F5753620E6419A000DF14B /* AddNoteViewController.swift */,
 				23F5750520E6411F000DF14B /* Assets.xcassets */,
 				23F5750720E6411F000DF14B /* LaunchScreen.storyboard */,
 				23F5750A20E6411F000DF14B /* Info.plist */,
@@ -237,7 +255,7 @@
 			files = (
 				23F5750920E6411F000DF14B /* LaunchScreen.storyboard in Resources */,
 				23F5750620E6411F000DF14B /* Assets.xcassets in Resources */,
-				23F5750120E6411F000DF14B /* Main.storyboard in Resources */,
+				23F5752D20E64128000DF14B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F5753120E6416E000DF14B /* CategoryViewController.swift in Sources */,
+				23F5753520E6418B000DF14B /* NoteDetailViewController.swift in Sources */,
+				23F5752F20E6415D000DF14B /* SplashScreen.swift in Sources */,
+				23F5753320E6417F000DF14B /* NotesViewController.swift in Sources */,
+				23F5753720E6419A000DF14B /* AddNoteViewController.swift in Sources */,
 				23F574FE20E6411F000DF14B /* ViewController.swift in Sources */,
+				23F5753920E66F0C000DF14B /* CoreDataManager.swift in Sources */,
 				23F5750420E6411F000DF14B /* Brain_Dump.xcdatamodeld in Sources */,
 				23F574FC20E6411F000DF14B /* AppDelegate.swift in Sources */,
 			);
@@ -300,14 +324,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		23F574FF20E6411F000DF14B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				23F5750020E6411F000DF14B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		23F5750720E6411F000DF14B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
