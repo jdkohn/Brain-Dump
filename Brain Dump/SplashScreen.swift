@@ -26,6 +26,7 @@ class SplashScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.textEditor.becomeFirstResponder()
     }
     
     func loadData() {

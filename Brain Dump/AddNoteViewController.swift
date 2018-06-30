@@ -15,6 +15,7 @@ class AddNoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.editor.becomeFirstResponder()
         
         var saveButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(self.save))
         self.navigationItem.setRightBarButton(saveButton, animated: false)

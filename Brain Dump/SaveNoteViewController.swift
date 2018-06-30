@@ -16,8 +16,7 @@ class SaveNoteViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var categories: [Category] = []
     var notes: [Note] = []
     var cd = CoreDataManager()
-    
-    
+
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var existingCategory: UIPickerView!
     @IBOutlet weak var newCategoryField: UITextField!
@@ -47,6 +46,10 @@ class SaveNoteViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         } else {
             performSegue(withIdentifier: "doneSaving", sender: nil)
         }
+    }
+    
+    @IBAction func cancel(_ sender: UIButton) {
+        performSegue(withIdentifier: "doneSaving", sender: nil)
     }
     
     override func viewDidLoad() {

@@ -35,15 +35,20 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         categories = cd.load(entityName: "Category") as! [Category]
         notes = cd.load(entityName: "Note") as! [Note]
         
+        populateDisplayNotes()
+        
+        table.dataSource = self
+        table.delegate = self
+        table.reloadData()
+    }
+    
+    func populateDisplayNotes() {
         displayNotes = []
         for note in notes {
             if(note.category == categoryNum) {
                 displayNotes.append(note)
             }
         }
-        table.dataSource = self
-        table.delegate = self
-        table.reloadData()
     }
     
     @objc func addNew() {
@@ -63,6 +68,20 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell", for: indexPath) as UITableViewCell
         cell.textLabel!.text = displayNotes[indexPath.row].title!
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            let note = displayNotes[indexPath.row]
+            cd.deleteNote(title: note.title!, text: note.text!, category: Int(note.category))
+            notes = cd.load(entityName: "Note") as! [Note]
+            populateDisplayNotes()
+            self.table.reloadData()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -53,11 +53,23 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            cd.deleteCategory(id: Int(categories[indexPath.row].id))
+            categories = cd.load(entityName: "Category") as! [Category]
+            self.table.reloadData()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "viewCategoryNotes") {
             let controller = segue.destination as! NotesViewController
             let rowNum = sender as! Int
-            controller.categoryNum = rowNum
+            controller.categoryNum = Int(categories[rowNum].id)
             controller.categoryName = categories[rowNum].name
         }
     }
