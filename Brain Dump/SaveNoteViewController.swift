@@ -58,6 +58,11 @@ class SaveNoteViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         notes = cd.load(entityName: "Note") as! [Note]
         existingCategory.delegate = self
         existingCategory.dataSource = self
+        
+        if(self.fromHome) {
+            let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(save(_:)))
+            self.navigationItem.rightBarButtonItem = saveButton
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
