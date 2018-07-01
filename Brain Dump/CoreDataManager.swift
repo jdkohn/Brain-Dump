@@ -130,4 +130,28 @@ public class CoreDataManager {
             
         }
     }
+    
+    func updateNote(title: String, oldText: String, category: Int, newText: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+        
+        let result = try? context.fetch(request)
+        let resultData = result as! [Note]
+        
+        for object in resultData {
+            if(Int(object.category) == category && object.title! == title && object.text! == oldText) {
+                object.setValue(newText, forKey: "text")
+                break
+            }
+        }
+        do {
+            try context.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+    }
 }
