@@ -52,7 +52,6 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     @objc func addNew() {
-        print("!")
         self.performSegue(withIdentifier: "addFromNotes", sender: nil)
     }
     
@@ -87,7 +86,8 @@ class NotesViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "viewNoteDetail") {
             let controller = segue.destination as! NoteDetailViewController
-            controller.note = displayNotes[sender as! Int]
+            let index = self.table.indexPath(for: sender as! UITableViewCell)
+            controller.note = displayNotes[index!.row]
         }
     }
 }
