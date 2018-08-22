@@ -36,7 +36,7 @@ class SaveNoteViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         } else {
             return
         }
-        let data = ["title": titleField.text!, "text": text, "category": category] as NSDictionary
+        let data = ["title": titleField.text!, "text": text, "category": category, "done": false] as NSDictionary
         cd.save(entityName: "Note", keys: data)
         notes = cd.load(entityName: "Note") as! [Note]
         

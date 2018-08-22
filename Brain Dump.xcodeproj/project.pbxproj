@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		237475672107CD9400D9F490 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 237475652107CD9300D9F490 /* unchecked.png */; };
+		237475682107CD9400D9F490 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 237475662107CD9400D9F490 /* checked.png */; };
 		23F574FC20E6411F000DF14B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F574FB20E6411F000DF14B /* AppDelegate.swift */; };
 		23F574FE20E6411F000DF14B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F574FD20E6411F000DF14B /* ViewController.swift */; };
 		23F5750420E6411F000DF14B /* Brain_Dump.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 23F5750220E6411F000DF14B /* Brain_Dump.xcdatamodeld */; };
@@ -42,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		237475602105177B00D9F490 /* Brain_Dump v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Brain_Dump v2.xcdatamodel"; sourceTree = "<group>"; };
+		237475652107CD9300D9F490 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = unchecked.png; path = "../../../Programming/App Images/Brain Dump/unchecked.png"; sourceTree = "<group>"; };
+		237475662107CD9400D9F490 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checked.png; path = "../../../Programming/App Images/Brain Dump/checked.png"; sourceTree = "<group>"; };
 		23F574F820E6411F000DF14B /* Brain Dump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brain Dump.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F574FB20E6411F000DF14B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23F574FD20E6411F000DF14B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +131,8 @@
 				23F5750520E6411F000DF14B /* Assets.xcassets */,
 				23F5750720E6411F000DF14B /* LaunchScreen.storyboard */,
 				23F5750A20E6411F000DF14B /* Info.plist */,
+				237475662107CD9400D9F490 /* checked.png */,
+				237475652107CD9300D9F490 /* unchecked.png */,
 				23F5750220E6411F000DF14B /* Brain_Dump.xcdatamodeld */,
 			);
 			path = "Brain Dump";
@@ -258,6 +265,8 @@
 			files = (
 				23F5750920E6411F000DF14B /* LaunchScreen.storyboard in Resources */,
 				23F5750620E6411F000DF14B /* Assets.xcassets in Resources */,
+				237475682107CD9400D9F490 /* checked.png in Resources */,
+				237475672107CD9400D9F490 /* unchecked.png in Resources */,
 				23F5752D20E64128000DF14B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,9 +596,10 @@
 		23F5750220E6411F000DF14B /* Brain_Dump.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				237475602105177B00D9F490 /* Brain_Dump v2.xcdatamodel */,
 				23F5750320E6411F000DF14B /* Brain_Dump.xcdatamodel */,
 			);
-			currentVersion = 23F5750320E6411F000DF14B /* Brain_Dump.xcdatamodel */;
+			currentVersion = 237475602105177B00D9F490 /* Brain_Dump v2.xcdatamodel */;
 			path = Brain_Dump.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -96,6 +96,7 @@
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,18 +126,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Owr-OF-ghg">
-                                <rect key="frame" x="0.0" y="106" width="375" height="561"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Owr-OF-ghg">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="noteCell" rowHeight="56" id="3hj-KA-ySu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" rowHeight="56" id="3hj-KA-ySu" customClass="NoteTableCell" customModule="Brain_Dump" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3hj-KA-ySu" id="gwO-3O-uD5">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dss-oS-2eD">
+                                                    <rect key="frame" x="15" y="18" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmU-Cm-I9Y">
+                                                    <rect key="frame" x="339" y="13.5" width="28" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="28" id="UVI-YU-bof"/>
+                                                        <constraint firstAttribute="height" constant="28" id="VcO-gW-l6C"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.14233137339999999" green="0.70549810729999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <state key="normal" image="unchecked.png">
+                                                        <color key="titleColor" red="0.14233137339999999" green="0.70549810729999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dss-oS-2eD" firstAttribute="centerY" secondItem="gwO-3O-uD5" secondAttribute="centerY" id="AZZ-Ei-Ykk"/>
+                                                <constraint firstItem="dss-oS-2eD" firstAttribute="leading" secondItem="gwO-3O-uD5" secondAttribute="leadingMargin" id="UMV-Av-zQc"/>
+                                                <constraint firstAttribute="trailing" secondItem="nmU-Cm-I9Y" secondAttribute="trailing" constant="8" id="UTm-l2-hc9"/>
+                                                <constraint firstItem="nmU-Cm-I9Y" firstAttribute="centerY" secondItem="gwO-3O-uD5" secondAttribute="centerY" id="xgS-jq-Ofr"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="button" destination="nmU-Cm-I9Y" id="HBm-EV-nrp"/>
+                                            <outlet property="nameLabel" destination="dss-oS-2eD" id="zCu-dv-CP8"/>
                                             <segue destination="eC7-9t-Aye" kind="show" identifier="viewNoteDetail" id="KMJ-T2-qeb">
                                                 <segue key="commit" inheritsFrom="parent" id="Pvf-ah-8m3"/>
                                                 <segue key="preview" inheritsFrom="commit" id="tE9-MX-MHM"/>
@@ -145,19 +173,31 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iGv-d0-64G">
+                                <rect key="frame" x="141" y="72" width="93" height="29"/>
+                                <segments>
+                                    <segment title="ToDo"/>
+                                    <segment title="Done"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleDidChange:" destination="BMm-xC-1rw" eventType="valueChanged" id="7FL-fZ-8wl"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Owr-OF-ghg" firstAttribute="bottom" secondItem="q15-ll-Vkx" secondAttribute="bottom" id="Cyr-aW-lsa"/>
+                            <constraint firstItem="iGv-d0-64G" firstAttribute="top" secondItem="q15-ll-Vkx" secondAttribute="top" constant="8" id="DxC-nF-oze"/>
                             <constraint firstItem="Owr-OF-ghg" firstAttribute="trailing" secondItem="q15-ll-Vkx" secondAttribute="trailing" id="FXU-Rc-2x9"/>
-                            <constraint firstItem="Owr-OF-ghg" firstAttribute="top" secondItem="q15-ll-Vkx" secondAttribute="top" id="X0z-Ja-Qz4"/>
                             <constraint firstItem="Owr-OF-ghg" firstAttribute="leading" secondItem="q15-ll-Vkx" secondAttribute="leading" id="hMw-jQ-Mfr"/>
+                            <constraint firstItem="Owr-OF-ghg" firstAttribute="top" secondItem="iGv-d0-64G" secondAttribute="bottom" constant="8" id="jbw-EL-u4h"/>
+                            <constraint firstItem="iGv-d0-64G" firstAttribute="centerX" secondItem="0um-VC-YNc" secondAttribute="centerX" id="ydL-7Z-0C6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q15-ll-Vkx"/>
                     </view>
                     <connections>
                         <outlet property="table" destination="Owr-OF-ghg" id="hEE-8x-VHU"/>
-                        <segue destination="eC7-9t-Aye" kind="show" identifier="asdf" id="fPa-LE-pQE"/>
+                        <outlet property="toggle" destination="iGv-d0-64G" id="zum-FE-zxA"/>
                         <segue destination="z1b-7C-ASs" kind="show" identifier="addFromNotes" id="sMI-4g-qf8"/>
                     </connections>
                 </viewController>
@@ -555,6 +595,9 @@
             <point key="canvasLocation" x="3609" y="155"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="unchecked.png" width="100" height="100"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="k0j-W4-cGV"/>
         <segue reference="sMI-4g-qf8"/>
